@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contatos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📱 Agenda de Contatos</h1>
+        
+        <!-- Estatísticas -->
+        <div class="stats-card">
+            <p>Total de contatos: <span id="totalContatos">0</span></p>
+        </div>
+
+        <!-- Formulário de cadastro -->
+        <div class="form-card">
+            <h2>Novo Contato</h2>
+            <form id="formContato">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" required placeholder="(00) 00000-0000">
+                </div>
+                
+                <div class="form-buttons">
+                    <button type="submit" class="btn-primary">Salvar</button>
+                    <button type="button" class="btn-secondary" id="btnCancelar">Cancelar</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Filtro -->
+        <div class="filter-card">
+            <div class="form-group">
+                <label for="filtro">🔍 Filtrar contatos:</label>
+                <input type="text" id="filtro" placeholder="Digite o nome para buscar...">
+            </div>
+        </div>
+
+        <!-- Tabela de contatos -->
+        <div class="table-card">
+            <h2>Lista de Contatos</h2>
+            <div class="table-responsive">
+                <table id="tabelaContatos">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Telefone</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoTabela">
+                        <!-- Os contatos serão inseridos aqui via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
